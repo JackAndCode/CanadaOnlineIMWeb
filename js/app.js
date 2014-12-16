@@ -10,7 +10,7 @@ app.factory("chatProvider", function ($http) {
   	this.bottom 
   	this.getMessages = function () {
   		var me = this;
-  		$http.get('http://localhost:8888/ernie-classic/?name=' + this.username + '&to=' + this.scope.to)
+  		$http.get('http://davidnuon.com/ernie-classic/?name=' + this.username + '&to=' + this.scope.to)
   		.success(function(data, status, headers, config) {   
 		  	if(me.count != data.length) {
 			  	me.count = data.length;
@@ -28,7 +28,7 @@ app.factory("chatProvider", function ($http) {
 		$scope.currentMessage = "";
 		$http({
 			method: 'POST',
-			url: 'http://localhost:8888/ernie-classic/',
+			url: 'http://davidnuon.com/ernie-classic/',
 			data: $.param({
 						method : 'write',
 						name : $scope.username,
@@ -63,7 +63,7 @@ app.directive('chatWindow', function(chatProvider){
 		replace: true,
 		scope: {}, 
 		restrict: 'E',
-		templateUrl: 'http://localhost:8888/CanadaOnlineIMWeb/js/tmpl/chat-window.html',
+		templateUrl: 'http://davidnuon.com/CanadaOnlineIMWeb/js/tmpl/chat-window.html',
 
 		link: function($scope, iElm, iAttrs, controller) {
 			var messageWindow = $(iElm[0]);

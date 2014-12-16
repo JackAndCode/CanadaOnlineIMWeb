@@ -8,9 +8,9 @@ body {
     width: 500px;
     background:#fff;
     box-shadow:rgba(0,0,0,.3) 0px 2px 4px;
-    border-radius: 5px;
     position: fixed;
     min-height: 300px;
+    border: 3px outset #ddd;
 }
 
 .window .ui-resizable-s {
@@ -32,7 +32,6 @@ body {
 }
 
 .window .ui-resizable-se {
-    background: #00f;
     cursor: se-resize;
     position: absolute;
     width: 7px;
@@ -46,13 +45,24 @@ body {
 .window .titlebar {
     cursor: move;
     border-bottom: 1px solid #ddd;
-    color:#333;
+    color:#fff;
     padding: 5px 10px;
     position: absolute;
     left:0;
     right:0;
     height: 30px;
     font-size:25px;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow:rgba(0,0,0,1) 1px 1px 0px;
+background: #1c5996; /* Old browsers */
+background: -moz-linear-gradient(left,  #1c5996 0%, #258dc8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1c5996), color-stop(100%,#258dc8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #1c5996 0%,#258dc8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #1c5996 0%,#258dc8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #1c5996 0%,#258dc8 100%); /* IE10+ */
+background: linear-gradient(to right,  #1c5996 0%,#258dc8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c5996', endColorstr='#258dc8',GradientType=1 ); /* IE6-9 */
+
 }
 
 .window .content {
@@ -101,10 +111,11 @@ body {
 .tag {
     position: absolute;
     bottom: 10px;
+    z-index: -10000;
     right: 10px;
     color:#fff;
     font-weight: bold;
     font-style: italic;
-    font-size:40px;
+    font-size:70px;
     text-shadow: rgba(0,0,0,1) -5px -5px 0;
 }
