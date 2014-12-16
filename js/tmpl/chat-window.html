@@ -1,0 +1,26 @@
+<div class="window">
+    <div class="titlebar">
+        <strong>{{ username }}</strong> to 
+        <strong>{{ to }}</strong> 
+    </div>
+    <div class="content">
+        <ul ng-repeat="msg in messages">
+            <li>
+                <strong>{{ msg.name }}</strong>: {{ msg.message }}
+            </li>
+        </ul>
+    </div>
+    <div class="message">
+        <input 
+        ng-keyup="$event.keyCode == 13 && sendMessage()"
+        ng-model="currentMessage" 
+        type="text"
+         placeholder="Message here"
+         />
+        <select ng-model="language">
+            <option value="FR">FR</option>
+            <option value="EN">EN</option>
+            <option value="JA">JA</option>
+        </select>
+    </div>
+</div>
